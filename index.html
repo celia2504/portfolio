@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Celia Lamari</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212; /* Fond noir profond */
+    color: #ffffff; /* Texte blanc pour le contraste */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+header {
+    background: rgba(255, 255, 255, 0.2); /* Blanc avec 80% de transparence */
+    color: black; /* Texte noir pour un bon contraste */
+    position: fixed;
+     padding: -2px 3px; 
+    text-align: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px; /* Hauteur du header */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+     backdrop-filter: blur(10px); 
+     line-height: 1; 
+
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* ✅ Solution pour éviter que le header cache le contenu */
+main {
+    margin-top: 80px; /* Décale le contenu pour qu'il commence sous le header */
+}
+
+
+header nav ul li {
+    text-align: center;
+}
+
+/* Animation de glissement et fondu */
+@keyframes slideFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+#projects {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: grey; /* Texte blanc */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #f39c12; /* Effet au survol en orange */
+}
+
+.home {
+    text-align: center;
+    padding: 50px;
+    background: #1e1e1e; /* Fond gris foncé */
+    max-width: 900px;
+    margin: auto;
+    margin-top: 20px;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+.home img {
+    width: 340px;
+    height: 350px;
+    border-radius: 70%;
+    margin-top: -40px;
+    rotate(10deg);
+    hover: rotate(-10deg);
+
+}
+
+section {
+     padding-top: 100px; 
+    padding: 40px;
+    max-width: 900px;
+    margin: auto;
+    background: #1e1e1e; /* Sections avec un gris foncé */
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+h2 {
+    color: #f39c12; /* Orange pour ressortir */
+}
+
+.project {
+    background: #2c2c2c; /* Projets en gris foncé */
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #000000; /* Footer noir */
+    color: white;
+    margin-top: 20px;
+}
+
+a {
+    color: #f39c12; /* Liens en orange */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input, textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #444; /* Bordure assombrie */
+    border-radius: 5px;
+    background: #1e1e1e; /* Fond des inputs */
+    color: #ffffff; /* Texte blanc */
+}
+
+button {
+    background: #f39c12; /* Bouton orange */
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #e67e22; /* Effet hover */
+}
+
+.social-links {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.social-links a {
+    margin: 0 10px;
+    font-size: 18px;
+    color: black;
+}
+
+.social-links a:hover {
+    color: #f39c12;
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#skills ul li {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+#skills ul li:nth-child(1) { transition-delay: 0.2s; }
+#skills ul li:nth-child(2) { transition-delay: 0.4s; }
+#skills ul li:nth-child(3) { transition-delay: 0.6s; }
+#skills ul li:nth-child(4) { transition-delay: 0.8s; }
+#skills ul li:nth-child(5) { transition-delay: 1s; }
+
+#skills.visible ul li {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Celia Lamari</h1>
+        
+        <nav>
+            <ul>
+                <li><a href="#home">Accueil</a></li> 
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#skills">Compétences</a></li>
+                <li><a href="#projects">Projets</a></li>
+                <li><a href="#experience">Expérience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+     <section id="home" class="home"><br><br><br>
+        <h2>Bienvenue sur mon Portfolio</h2>
+        <p>Étudiante en Data Science & IA | Développeuse Web</p><br>
+        <p>Découvrez mon parcours, mes compétences et mes projets !</p>
+        <img src="C:\Users\hp\OneDrive\Bureau\dev\PortFolioCelia Final\photocv.png" alt="Photo de Celia Lamari">
+          <a href="C:\Users\hp\OneDrive\Bureau\dev\PortFolioCelia Final\Celia.pdf" target="_blank">Mon CV </a>
+    </section>
+    <br><br><br><br><br><br><br><br><br>
+    
+    <section id="about"><br><br><br>
+        <h2>À propos de moi 🚀</h2>
+        <p>👋 Hello ! Moi, c'est Celia, un passionné de développement web et de nouvelles technologies. Toujours curieux et avide d'apprentissage, j'adore explorer les dernières tendances du code et relever de nouveaux défis.<br><br><br>
+
+💻 Développeur [front-end / back-end / full-stack], je maîtrise des technologies comme [HTML, CSS, JavaScript, React, Node.js, etc.] et je prends plaisir à concevoir des interfaces modernes, performantes et intuitives.<br><br>
+
+🎯 Ma philosophie :<br><br>
+🔹 Optimisation et performance – Écrire un code propre, efficace et maintenable.<br>
+🎨 Expérience utilisateur (UX/UI) – Créer des designs interactifs et ergonomiques.<br>
+🤝 Collaboration et communication – Travailler en équipe et échanger des idées pour innover ensemble.<br>
+
+✨ Au-delà du code, je suis curieux de tout ce qui touche au digital, à l’intelligence artificielle et aux innovations technologiques. J’aime aussi partager mes connaissances à travers des projets open-source et des articles techniques.<br><br><br>
+
+📩 Un projet en tête ? Une collaboration ?
+N’hésite pas à me contacter, je serais ravi d’échanger avec toi ! 🚀
+
+</p>
+    </section>
+    <br><br><br><br><br><br><br><br>
+    <section id="skills"><br><br><br><br>
+        <h2>🚀 Compétences</h2>
+        <ul>
+            <li><strong> 💻 Langages de programmation :</strong> ✔️ Python – Développement d’applications, scripts automatisés, analyse de données.<br>
+✔️ C – Programmation bas niveau, gestion de la mémoire, algorithmes.<br>
+✔️ PHP – Développement web côté serveur, intégration avec bases de données.<br>
+✔️ SQL – Requêtes, gestion et optimisation de bases de données.<br>
+✔️ JavaScript – Développement interactif, manipulation du DOM, frameworks modernes.<br><br></li>
+            <li><strong> 🌐 Technologies Web :</strong> ✔️ HTML & CSS – Création d’interfaces ergonomiques et responsives.<br>
+✔️ JavaScript (DOM & APIs) – Dynamisation des pages et interactions utilisateur.<br><br></li>
+            <li><strong> 🗃️ Bases de données :</strong>✔️ MySQL – Conception et gestion de bases de données relationnelles.<br>
+✔️ WorkBench – Outil de modélisation et d’administration de bases de données.<br><br></li>
+            <li><strong> 🔧 Outils & Environnements :</strong> ✔️ Git & GitHub – Versionning, collaboration et gestion de projets.<br>
+✔️ VS Code – Éditeur de code principal avec extensions pour améliorer la productivité.<br>
+✔️ VirtualBox – Virtualisation pour tester et développer dans différents environnements.<br><br></li>
+            <li><strong> ☁️ Cloud  & Hébergement :</strong> ✔️ AWS (Amazon Web Services) – Hébergement cloud, gestion de serveurs et déploiement d’applications.<br><br></li>
+        </ul>
+    </section>
+    <br><br><br><br><br><br><br><br><br>
+    <section id="projects"><br><br><br><br>
+        <h2>Projets</h2>
+        <div class="project">
+            <h3>🌐 Développement d’un Portfolio</h3>
+            <p>Création d’un site web personnel dynamique pour présenter mes projets et compétences.
+
+Principales fonctionnalités :<br><br>
+✅ Interface responsive et moderne pour une navigation fluide.<br>
+✅ Section projets avec démonstrations et détails techniques.<br>
+✅ Intégration d’un formulaire de contact sécurisé.<br>
+✅ Optimisation SEO et performance web.<br><br>
+
+🔧 Technologies utilisées : HTML, CSS, JavaScript, PHP, Bootstrap.<br><br>
+
+Ce projet m’a permis de développer mes compétences en développement web front-end et back-end, ainsi qu’en UX/UI design.</p>
+        </div>
+        <div class="project">
+            <h3>🛍 Développement d'une Application E-Commerce</h3>
+            <p>Dans le cadre de ce projet, j’ai conçu et développé une application e-commerce complète pour offrir une expérience utilisateur fluide et intuitive aux acheteurs en ligne. L’application comprend :<br><br>
+
+ ✅Interface utilisateur (UI) moderne et intuitive, facilitant la navigation et l’accès aux produits.<br>
+ ✅Catalogue de produits détaillé, avec descriptions, images haute qualité et avis clients.<br>
+ ✅Système de panier et de paiement sécurisé, prenant en charge plusieurs options de paiement.<br>
+ ✅Suivi des commandes en temps réel, permettant aux clients de suivre leurs achats du début à la fin.<br>
+ ✅Notifications et communication personnalisées, incluant notifications push et emails.<br>
+ ✅Sécurité renforcée, protégeant les données utilisateurs et les transactions financières.<br>
+ ✅Optimisation mobile, garantissant une expérience utilisateur optimale sur tous les appareils.<br><br>
+
+Technologies Utilisées :
+
+ • Front-end :CSS/Js/Html.<br>
+ • Back-end : PHP.<br>
+ • Base de données : MySQL.<br><br>
+ 
+
+Ce projet m’a permis de renforcer mes compétences en gestion de projet. J ’ai également acquis une solide expérience en collaboration avec une équipe multidisciplinaire.</p>
+        </div>
+        <div class="project">
+            <h3>🎮 Développement d’un Jeu Pac-Man Interactif</h3>
+            <p>Conception et implémentation d’un jeu Pac-Man en C++, avec une intelligence artificielle basique pour les fantômes.
+
+Principales fonctionnalités :<br><br>
+✅ Mécanismes de jeu fidèles à l’original (déplacements, power-ups, IA ennemie).<br>
+✅ Affichage graphique en mode console ou avec une bibliothèque graphique.<br>
+✅ Gestion du score et niveaux progressifs.<br><br>
+
+🔧 Technologies utilisées : C++.<br><br>
+
+Ce projet m’a permis d’explorer l’algorithmie, l’optimisation de la gestion mémoire et la programmation orientée objet appliquée aux jeux vidéo.</p>
+        </div>
+
+
+
+        <div class="project">
+            <h3>🚅 Système de Réservation de Billets TGV</h3>
+            <p>Développement d’une application de gestion de réservation de billets de train en C++.
+
+Principales fonctionnalités :<br><br>
+✅ Réservation en temps réel avec gestion des disponibilités.<br>
+✅ Gestion des paiements et des factures.<br>
+✅ Stockage et suivi des réservations via une base de données.<br>
+✅ Interface utilisateur intuitive en mode console.<br>
+
+🔧 Technologies utilisées : C++, SQL.<br><br>
+
+Ce projet m’a permis d’approfondir les concepts de gestion de transactions, d’optimisation de bases de données et d’architecture logicielle.</p>
+        </div>
+
+        <div class="project">
+            <h3>🚀 Expérience Cloud AWS : Déploiement et Hébergement</h3>
+            <p>Dans le cadre de mes projets, j’ai acquis une expérience avec les solutions Cloud AWS pour le déploiement et l’hébergement d’applications web et backend.
+
+Principales réalisations :<br><br>
+✅ Mise en place d’infrastructures Cloud pour assurer la scalabilité et la haute disponibilité des applications.<br>
+✅ Déploiement de services en utilisant EC2, S3 et RDS pour le stockage et la gestion des bases de données.<br>
+✅ Configuration de serveurs web et gestion des accès via IAM.
+✅ Automatisation et CI/CD avec Lambda.<br><br>
+
+🔧 Technologies utilisées : AWS EC2, S3, RDS, Lambda, IAM.<br><br>
+
+Ce projet m’a permis de comprendre les principes du Cloud Computing, l’optimisation des ressources, et la gestion de la sécurité dans un environnement distribué.</p>
+        </div>
+
+        <div class="project">
+            <h3>🔤 Développement d’un Jeu Scrabble Interactif</h3>
+            <p>Dans le cadre de ce projet, j’ai conçu et développé un jeu de Scrabble en langage C, offrant une expérience de jeu fidèle au célèbre jeu de société. Les principales fonctionnalités du jeu incluent :<br><br>
+
+ • Interface Utilisateur Textuelle : Une interface en mode console, intuitive et facile à utiliser.<br>
+ • Gestion du Plateau de Jeu : Affichage dynamique du plateau de Scrabble, avec mise à jour en temps réel des mouvements des joueurs.<br>
+ • Système de Score Automatisé : Calcul automatique des points pour chaque mot joué, incluant les bonus de lettres et de mots.<br>
+ • Gestion des Joueurs : Support pour plusieurs joueurs, avec gestion des tours et des scores individuels.<br>
+ • Fonctionnalités de Sauvegarde et de Chargement : Possibilité de sauvegarder la progression du jeu et de la reprendre ultérieurement.<br>
+ • Mélange aléatoire des Lettres : Distribution aléatoire des lettres aux joueurs, conforme aux règles du Scrabble.<br><br>
+
+Technologies Utilisées :<br><br>
+
+ • Langage de Programmation : C.<br>
+ • Bibliothèques Utilisées : Standard C Library pour la manipulation des données et l’affichage en mode console.<br>
+ • Algorithmes : Algorithmes de gestion de la liste des mots, du calcul des scores et du mélange des lettres.<br><br>
+
+Ce projet m’a permis de développer des compétences solides en programmation en langage C, en conception d’algorithmes efficaces, et en gestion de la mémoire. J’ai également appris à implémenter des fonctionnalités complexes dans un environnement de développement limité.</p>
+        </div>
+
+        <div class="project">
+            <h3>📊 Création d'un Outil de Gestion</h3>
+            <p>J’ai conçu et développé un outil de gestion permettant une optimisation des flux et des données dans un environnement professionnel.
+
+Principales fonctionnalités :<br><br>
+✅ Interface utilisateur ergonomique pour une prise en main rapide.<br>
+✅ Système de gestion des utilisateurs, avec authentification et permissions sécurisées.<br>
+✅ Base de données relationnelle pour stocker et organiser les informations efficacement.<br>
+✅ Automatisation des tâches et génération de rapports en temps réel.<br><br>
+
+🔧 Technologies utilisées :MySQL, HTML/CSS.<br><br>
+
+Ce projet m’a permis de renforcer mes compétences en développement backend, gestion de bases de données et sécurité des applications web.</p>
+        </div>
+    </section>
+    <br><br><br><br><br><br><br><br><br><br>
+    <section id="experience"><br><br><br><br>
+        <h2>Expérience</h2>
+        <p><strong> 🚀 Stagiaire en développement Web</strong></p>
+        <p>Groupe Djonas · Stage<br>
+juin 2024 - août 2024 · 3 mois<br>
+Algérie<br><br>
+✅Développement de fonctionnalités interactives sur des sites web.<br>
+✅Intégration de contenu multimédia en HTML, CSS et JavaScript.<br>
+✅Tests et débogage pour assurer la qualité du code.<br>
+✅Collaboration en équipe et documentation des développements.<br><br></p>
+        <p><strong> 🚀 Employée en CDI dans la restauration et le développement du site internet de l'entreprise</strong></p>
+        <p>Burn In Box<br> · CDIBurn In Box<br> · CDI<br>
+oct. 2024 - févr. 2025 · 5 mois<br>
+Thiais, Île-de-France, France<br><br>
+✅Conception et développement du site internet.<br>
+✅Intégration de fonctionnalités interactives et gestion du contenu.<br>
+✅URL du site : fr.restaurantguru.com</p><br>
+    </section>
+    <br><br><br><br><br><br><br><br><br>
+    <section id="contact"><br><br><br><br>
+        <h2>Contact</h2>
+        <p>Email : <a href="mailto:contactlamari.celia@gmail.com">contactlamari.celia@gmail.com</a></p>
+        <p>Téléphone : 07 45 31 84 88</p>
+        <form>
+            <input type="text" name="name" placeholder="Votre nom" required>
+            <input type="email" name="email" placeholder="Votre email" required>
+            <textarea name="message" placeholder="Votre message" rows="5" required></textarea>
+            <button type="submit">Envoyer</button>
+        </form>
+        <div class="social-links">
+            <p>Retrouvez-moi sur :</p>
+            <a href="https://www.linkedin.com/in/celia-lamari-04164029b/" target="_blank">LinkedIn</a>
+            <a href="https://github.com/celia2504" target="_blank">GitHub</a>
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Celia Lamari - Tous droits réservés</p>
+    </footer>
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        document.body.style.opacity = "1";
+
+        let header = document.querySelector("header");
+        header.classList.add("fade-in");
+
+        let sections = document.querySelectorAll("section");
+        let observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                }
+            });
+        }, { threshold: 0.3 });
+
+        sections.forEach(section => {
+            if (!section.classList.contains("visible")) {
+    section.classList.add("hidden");
+}
+
+            observer.observe(section);
+        });
+    });
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    let skillsSection = document.getElementById("skills");
+    function revealSkills() {
+        let rect = skillsSection.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 100) {
+            skillsSection.classList.add("visible");
+        }
+    }
+    window.addEventListener("scroll", revealSkills);
+    revealSkills();
+});
+</script>
+
+</body>
+</html>
