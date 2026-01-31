@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Celia Lamari - Data & IA</title>
+    
+    <!-- Polices -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    
+    <!-- Icônes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="particles"></div>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+        <div class="logo">CL<span class="dot">.</span></div>
+        <ul class="nav-links">
+            <li><a href="#home">Accueil</a></li>
+            <li><a href="#skills">Stack Tech</a></li>
+            <li><a href="#experience">Parcours</a></li>
+            <li><a href="#projects">Projets</a></li>
+            <li><a href="#contact" class="btn-contact">Me contacter</a></li>
+        </ul>
+        <div class="hamburger">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="hero">
+        <div class="container hero-content">
+            <div class="hero-text reveal">
+                <span class="badge"><i class="fas fa-check-circle"></i> Disponible Avril 2026 (Stage 4-6 mois)</span>
+                <h1>Celia <span class="gradient-text">Lamari</span></h1>
+                <h2 class="typewriter">Je suis <span class="txt-type" data-wait="3000" data-words='["Data Scientist", "Développeuse Python", "Passionnée par la GenAI", "Future Ingénieure"]'></span></h2>
+                <p>
+                    Étudiante en 3ᵉ année de Bachelor Data & IA à l’ECE Paris. Je transforme la donnée brute en intelligence exploitable grâce au 
+                    <strong>Machine Learning</strong> et au <strong>Développement Web</strong>.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary"><i class="fas fa-code-branch"></i> Voir mes projets</a>
+                    <a href="#contact" class="btn btn-outline"><i class="fas fa-envelope"></i> Contact</a>
+                        <!-- Nouveau bouton CV -->
+    <a href="cvstage.pdf" download class="btn btn-outline">
+        <i class="fas fa-download"></i> Mon CV
+    </a>
+                </div>
+            </div>
+            <div class="hero-img reveal delay-200">
+                <div class="img-wrapper">
+                    <div class="circle-spin"></div>
+                    <!-- REMPLACE PAR TA PHOTO -->
+                    <img src="photo.jpg" alt="Celia Lamari">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="section">
+        <div class="container">
+            <h2 class="section-title reveal">Ma <span class="gradient-text">Stack Technique</span></h2>
+            <div class="skills-wrapper">
+                <!-- Data & IA -->
+                <div class="skill-category reveal">
+                    <h3><i class="fas fa-brain"></i> Data Science & IA</h3>
+                    <div class="tech-grid">
+                        <div class="tech-item"><i class="devicon-python-plain colored"></i><span>Python</span></div>
+                        <div class="tech-item"><i class="devicon-pandas-original colored"></i><span>Pandas</span></div>
+                        <div class="tech-item"><i class="devicon-tensorflow-original colored"></i><span>TensorFlow</span></div>
+                        <div class="tech-item"><i class="fas fa-database text-blue"></i><span>SQL</span></div>
+                        <div class="tech-item"><i class="fas fa-robot text-purple"></i><span>GenAI</span></div>
+                        <div class="tech-item"><i class="fas fa-comments text-green"></i><span>NLP</span></div>
+                    </div>
+                </div>
+                <!-- Web Dev -->
+                <div class="skill-category reveal delay-100">
+                    <h3><i class="fas fa-laptop-code"></i> Développement Web</h3>
+                    <div class="tech-grid">
+                        <div class="tech-item"><i class="devicon-html5-plain colored"></i><span>HTML5</span></div>
+                        <div class="tech-item"><i class="devicon-css3-plain colored"></i><span>CSS3</span></div>
+                        <div class="tech-item"><i class="devicon-javascript-plain colored"></i><span>JS</span></div>
+                        <div class="tech-item"><i class="devicon-react-original colored"></i><span>React</span></div>
+                        <div class="tech-item"><i class="devicon-fastapi-plain colored"></i><span>FastAPI</span></div>
+                        <div class="tech-item"><i class="devicon-laravel-plain colored"></i><span>Laravel</span></div>
+                    </div>
+                </div>
+                <!-- Tools -->
+                <div class="skill-category reveal delay-200">
+                    <h3><i class="fas fa-tools"></i> DevOps & Outils</h3>
+                    <div class="tech-grid">
+                        <div class="tech-item"><i class="devicon-git-plain colored"></i><span>Git</span></div>
+                        <div class="tech-item"><i class="devicon-docker-plain colored"></i><span>Docker</span></div>
+                        <div class="tech-item"><i class="devicon-amazonwebservices-original colored"></i><span>AWS</span></div>
+                        <div class="tech-item"><i class="devicon-mysql-plain colored"></i><span>MySQL</span></div>
+                        <div class="tech-item"><i class="devicon-firebase-plain colored"></i><span>Firebase</span></div>
+                        <div class="tech-item"><i class="devicon-vscode-plain colored"></i><span>VS Code</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- SOFT SKILLS SECTION -->
+<section class="section">
+    <div class="container">
+        <h2 class="section-title reveal">Mes <span class="gradient-text">Atouts</span></h2>
+        <div class="soft-skills-grid">
+            <div class="soft-card reveal">
+                <i class="fas fa-users"></i>
+                <h3>Esprit d'Équipe</h3>
+                <p>Habituée aux méthodes Agiles et au travail collaboratif.</p>
+            </div>
+            <div class="soft-card reveal delay-100">
+                <i class="fas fa-lightbulb"></i>
+                <h3>Résolution de Problèmes</h3>
+                <p>Approche analytique pour transformer les défis en solutions.</p>
+            </div>
+            <div class="soft-card reveal delay-200">
+                <i class="fas fa-chalkboard-teacher"></i>
+                <h3>Vulgarisation</h3>
+                <p>Capacité à expliquer des concepts Data complexes à des non-techs.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- EXPERIENCE SECTION -->
+    <section id="experience" class="section bg-darker">
+        <div class="container">
+            <h2 class="section-title reveal">Mon <span class="gradient-text">Parcours</span></h2>
+            <div class="timeline">
+                <div class="timeline-item reveal">
+                    <div class="timeline-icon"><i class="fas fa-briefcase"></i></div>
+                    <div class="timeline-content">
+                        <span class="date">Oct 2024 - Mars 2025 | Thiais, France</span>
+                        <h3>Employée polyvalente & Dev Web</h3>
+                        <h4>Burn In Box</h4>
+                        <p>Intervention sur la digitalisation des processus de vente.</p>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Maintenance évolutive du site vitrine (HTML, CSS, JS).</li>
+                            <li><i class="fas fa-check"></i> Gestion du Back-Office pour le suivi des commandes.</li>
+                            <li><i class="fas fa-check"></i> Travail en équipe agile.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item reveal">
+                    <div class="timeline-icon"><i class="fas fa-laptop"></i></div>
+                    <div class="timeline-content">
+                        <span class="date">Juin 2024 - Août 2024 | Algérie</span>
+                        <h3>Stagiaire Développement Web</h3>
+                        <h4>GROUP Djonas</h4>
+                        <p>Conception d'interfaces utilisateurs modernes.</p>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Développement Front-End interactif (JS).</li>
+                            <li><i class="fas fa-check"></i> Intégration multimédia et optimisation UX.</li>
+                            <li><i class="fas fa-check"></i> Tests et débogage.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item reveal">
+                    <div class="timeline-icon school"><i class="fas fa-graduation-cap"></i></div>
+                    <div class="timeline-content">
+                        <span class="date">2025 - En cours | Paris</span>
+                        <h3>Bachelor 3 : Data & IA</h3>
+                        <h4>ECE Paris</h4>
+                        <p>Machine Learning, Data Quality, SQL, Cloud Computing.</p>
+                    </div>
+                </div>
+                 <div class="timeline-item reveal">
+                    <div class="timeline-icon school"><i class="fas fa-certificate"></i></div>
+                    <div class="timeline-content">
+                        <span class="date">2024 - 2026</span>
+                        <h3>Certifications</h3>
+                        <h4>DataScientest & OMNES</h4>
+                        <div class="tags-cloud">
+                            <span>Python Data Science</span>
+                            <span>Prompt Engineering</span>
+                            <span>GenAI Content</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS SECTION (Tous les projets) -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title reveal">Projets <span class="gradient-text">Réalisés</span></h2>
+            <div class="projects-grid">
+                
+                <!-- Projet 1 -->
+                <div class="project-card reveal">
+                    <div class="card-image bg-blue-glow"><i class="fas fa-shield-halved"></i></div>
+                    <div class="card-info">
+                        <h3>Détection Fraude Bancaire</h3>
+                        <p class="tech-stack">Python • FastAPI • SQL • ML</p>
+                        <p>IA de détection d'anomalies financières en temps réel.</p>
+                        <button class="link-btn open-modal" data-id="1">Voir détails <i class="fas fa-plus"></i></button>
+                    </div>
+                </div>
+
+                <!-- Projet 2 -->
+                <div class="project-card reveal delay-100">
+                    <div class="card-image bg-purple-glow"><i class="fas fa-robot"></i></div>
+                    <div class="card-info">
+                        <h3>ChatBot IA d'Orientation</h3>
+                        <p class="tech-stack">Python • NLP • IA</p>
+                        <p>Assistant virtuel d'orientation via analyse de langage naturel.</p>
+                        <button class="link-btn open-modal" data-id="2">Voir détails <i class="fas fa-plus"></i></button>
+                    </div>
+                </div>
+
+                <!-- Projet 3 -->
+                <div class="project-card reveal delay-200">
+                    <div class="card-image bg-green-glow"><i class="fas fa-plane"></i></div>
+                    <div class="card-info">
+                        <h3>Analyse Données Aériennes</h3>
+                        <p class="tech-stack">Clustering • K-Means • SQL</p>
+                        <p>Segmentation de marché et modélisation de flottes.</p>
+                        <button class="link-btn open-modal" data-id="3">Voir détails <i class="fas fa-plus"></i></button>
+                    </div>
+                </div>
+
+                 <!-- Projet 4 -->
+                 <div class="project-card reveal">
+                    <div class="card-image bg-orange-glow"><i class="fas fa-spider"></i></div>
+                    <div class="card-info">
+                        <h3>Pipeline & Web Scraping</h3>
+                        <p class="tech-stack">Python • ETL • Automation</p>
+                        <p>Flux automatisé d'extraction de données multi-sources.</p>
+                        <button class="link-btn open-modal" data-id="4">Voir détails <i class="fas fa-plus"></i></button>
+                    </div>
+                </div>
+
+                <!-- Projet 5 -->
+                <div class="project-card reveal delay-100">
+                    <div class="card-image bg-blue-glow"><i class="fas fa-train"></i></div>
+                    <div class="card-info">
+                        <h3>Système Réservation TGV</h3>
+                        <p class="tech-stack">Web App • UX/UI • Gestion</p>
+                        <p>Application web de gestion des flux et billetterie.</p>
+                        <button class="link-btn open-modal" data-id="5">Voir détails <i class="fas fa-plus"></i></button>
+                    </div>
+                </div>
+
+                <!-- Projet 6 -->
+                <div class="project-card reveal delay-200">
+                    <div class="card-image bg-purple-glow"><i class="fas fa-shopping-cart"></i></div>
+                    <div class="card-info">
+                        <h3>Marketplace Intelligente</h3>
+                        <p class="tech-stack">Firebase • MySQL • Stripe</p>
+                        <p>Projet Hackathon avec paiements et pricing dynamique.</p>
+                        <button class="link-btn open-modal" data-id="6">Voir détails <i class="fas fa-plus"></i></button>
+                    </div>
+                </div>
+
+                <!-- Projet 7 -->
+                <div class="project-card reveal">
+                    <div class="card-image bg-green-glow"><i class="fas fa-cloud"></i></div>
+                    <div class="card-info">
+                        <h3>Déploiement Cloud & Jeux</h3>
+                        <p class="tech-stack">AWS • JS • Cloud</p>
+                        <p>Hébergement cloud et création de jeux interactifs.</p>
+                        <button class="link-btn open-modal" data-id="7">Voir détails <i class="fas fa-plus"></i></button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT FOOTER -->
+    <footer id="contact">
+        <div class="container footer-content reveal">
+            <h2>Prêt à <span class="gradient-text">innover ?</span></h2>
+            <p>Je suis à la recherche d'une opportunité où mes compétences pourront créer de la valeur.</p>
+            <div class="contact-box">
+                <div class="contact-item"><i class="fas fa-envelope"></i><span>contactlamari.celia@gmail.com</span></div>
+                <div class="contact-item"><i class="fas fa-phone"></i><span>07 45 31 84 88</span></div>
+            </div>
+            <div class="socials">
+                <a href="https://linkedin.com/in/celia-lamari" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+            <p class="copyright">© 2026 Celia Lamari.</p>
+        </div>
+    </footer>
+
+    <!-- FENETRE MODALE (Cachée par défaut) -->
+    <div id="project-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2 id="modal-title">Titre du Projet</h2>
+            <p id="modal-tech" class="modal-tech">Tech Stack</p>
+            <div class="modal-body">
+                <p id="modal-desc">Description détaillée...</p>
+                <div id="modal-details" class="details-list"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <a href="#" class="scroll-top"><i class="fas fa-arrow-up"></i></a>
+</body>
+</html>
